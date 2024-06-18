@@ -5,56 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>assignment17</title>
     <style>
-        
-  body {
+       body {
 
-    font-family: Arial, sans-serif;
-    background-color: #ffccff;
-    display: flex;
+font-family: Arial, sans-serif;
+background-color: #ffccff;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+height: 100vh;
+flex-wrap: wrap;
+}
+
+.card {
+flex-wrap: wrap;
+width: 300px;
+background-color:white;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+transition: transform 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-2px);
+}
+
+.card img {
+width: 100%;
+height: auto;
+border-bottom: 1px solid white;
+background-size: cover;
+}
+
+.card-content {
+padding: 10px;
+}
+
+.card-content h2 {
+margin-top: -5px;
+font-size: 20px;
+font-style:serif;
+color: blue;
+}
+
+.card-content p {
+margin-bottom: 0;
+color: black;
+font-size: 14px;
+
+}
+
+/* Small Devices */
+
+@media screen and (max-width: 600px){
+.card-content{
+    visibility: hidden;
+    display: none;
+}
+.card img{
+    width:100%;
+    align-items: center;
+    display:flex;
+    justify-content:space-evenly;
+    flex-direction: column;
+    background-size: cover;
+}
+.body{
+    display:flex;
+    flex-direction: column;
+     flex-wrap: wrap;
+     justify-content:space-evenly ;
+    
+    
+}
+
+}
+
+/* Normal Devices */
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+
+.card-content{
+    font-size:9px;
+
+}
+.card img{
+    width:100%;
+    align-items: center;
+
+}
+.body{
+    
+    
     justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
-  }
-
-  .card {
-    width: 300px;
-   background-color:white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-2px);
-  }
-
-  .card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid white;
-  }
-
-  .card-content {
-    padding: 10px;
-  }
-
-  .card-content h2 {
-    margin-top: -5px;
-    font-size: 20px;
-    font-style:serif;
-    color: blue;
-  }
-
-  .card-content p {
-    margin-bottom: 0;
-    color: black;
-    font-size: 14px;
 
 
+}
+}
+
+/* Tablets Devices */
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+ .card-content{
     
-  }
+    font-size: 10px;
+ }
+.card img{
+    
+    width:100%;
+}
+.body{
+     display: flex;
+    flex-direction:row ;
+    justify-content:space-evenly ;
+    align-items: center;
+    
 
-    </style>
+
+}
+}
+
+/* Large Devices */
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+
+body {
+
+font-family: Arial, sans-serif;
+background-color: #ffccff;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+height: 100vh;
+
+}
+
+}  
+  </style>
 </head>
 <body>
     <div class="card">
